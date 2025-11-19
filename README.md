@@ -4,9 +4,12 @@ A fast, minimal, and classy personal website with an integrated blog. Built with
 
 ## Features
 
-- **Clean, Minimalist Design** - Inspired by simple, content-focused websites
-- **Fast & Responsive** - Works perfectly on all devices
+- **Clean, Minimalist Design** - Grey borders, elegant typography, content-focused layout
+- **Fast & Responsive** - Works perfectly on all devices with no frameworks
 - **Easy Blog Management** - Write posts in Markdown or HTML
+- **Contact Form** - Built-in Netlify form that sends messages to your email (free!)
+- **Resume Page** - Embedded PDF viewer with download option
+- **Profile Picture** - Circular profile image on home page
 - **No Dependencies** - Pure HTML/CSS/JS (optional Node.js for Markdown conversion)
 - **Free Hosting** - Ready to deploy on Netlify (or Vercel, GitHub Pages)
 - **SEO Friendly** - Semantic HTML with proper meta tags
@@ -20,7 +23,9 @@ Replace placeholder content with your own information:
 - **index.html** - Update the "About Me" section with your background
 - **experience.html** - Add your work experience, education, and skills
 - **contact.html** - Update with your email and social media links
-- **All files** - Replace "Your Name" with your actual name
+- **resume.html** - Add your resume PDF to `files/resume.pdf`
+- **images/profile.jpg** - Add your profile picture (400x400px recommended)
+- **All files** - Replace "Your Name" with your actual name throughout
 
 ### 2. Preview Locally
 
@@ -69,11 +74,14 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions, custom domains, an
 
 ```
 .
-├── index.html              # Home page (About Me)
+├── index.html              # Home page with profile picture
 ├── experience.html         # Experience and skills
-├── contact.html           # Contact information
+├── contact.html           # Contact page with form
+├── resume.html            # Resume viewer and download
 ├── blog.html              # Blog listing page
-├── styles.css             # All styles (minimalist design)
+├── styles.css             # All styles (grey borders, serif fonts)
+├── images/                # Profile picture and other images
+├── files/                 # Resume PDF and other files
 ├── .nojekyll              # Tells GitHub Pages not to use Jekyll
 ├── blog/
 │   ├── posts.json         # Blog post metadata (auto-generated)

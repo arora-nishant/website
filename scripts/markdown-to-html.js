@@ -147,40 +147,41 @@ function generateHTML(filename) {
     <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-content">
-            <a href="../../index.html" class="nav-brand">Your Name</a>
-            <div class="nav-links">
-                <a href="../../index.html">About</a>
-                <a href="../../experience.html">Experience</a>
-                <a href="../../blog.html" class="active">Blog</a>
-                <a href="../../contact.html">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container">
-        <article>
-            <header class="post-header">
-                <h1>${title}</h1>
-                <div class="post-meta">
-                    <time datetime="${date}">${formatDate(date)}</time>
+    <div class="site-wrapper">
+        <nav class="nav">
+            <div class="nav-content">
+                <a href="../../index.html" class="nav-brand">Your Name</a>
+                <div class="nav-links">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../experience.html">Experience</a>
+                    <a href="../../blog.html" class="active">Blog</a>
+                    <a href="../../resume.html">Resume</a>
+                    <a href="../../contact.html">Contact</a>
                 </div>
-            </header>
-
-            <div class="post-content">
-                ${content}
             </div>
-        </article>
+        </nav>
 
-        <div style="margin-top: 3rem;">
-            <a href="../../blog.html">← Back to all posts</a>
-        </div>
-    </main>
+        <main class="container">
+            <a href="../../blog.html" class="back-link">← Back to all posts</a>
 
-    <footer class="footer">
-        <p>&copy; ${new Date().getFullYear()} Your Name. All rights reserved.</p>
-    </footer>
+            <article>
+                <header class="post-header">
+                    <h1>${title}</h1>
+                    <div class="post-meta">
+                        <time datetime="${date}">${formatDate(date)}</time>
+                    </div>
+                </header>
+
+                <div class="post-content">
+                    ${content}
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; ${new Date().getFullYear()} Your Name. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
 `;
