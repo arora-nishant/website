@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Fast and Responsive Websites - Your Name</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../../index.html" class="nav-brand">Your Name</a>
+            <div class="nav-links">
+                <a href="../../index.html">About</a>
+                <a href="../../experience.html">Experience</a>
+                <a href="../../blog.html" class="active">Blog</a>
+                <a href="../../contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article>
+            <header class="post-header">
+                <h1>Building Fast and Responsive Websites</h1>
+                <div class="post-meta">
+                    <time datetime="2024-01-20">January 20, 2024</time>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <p>
+                    Performance is crucial for modern websites. Users expect pages to load quickly and
+                    work smoothly on any device. Here are some key principles I follow when building
+                    fast, responsive websites.
+                </p>
+
+                <h2>1. Start with a Solid Foundation</h2>
+                <p>
+                    Before adding fancy features, focus on the fundamentals:
+                </p>
+                <ul>
+                    <li><strong>Semantic HTML</strong> - Use the right elements for the right purposes</li>
+                    <li><strong>Minimal CSS</strong> - Start with what you need, add more only when necessary</li>
+                    <li><strong>Progressive Enhancement</strong> - Build a solid baseline that works everywhere</li>
+                </ul>
+
+                <h2>2. Optimize for Performance</h2>
+                <p>
+                    Every millisecond counts. Here's what makes the biggest difference:
+                </p>
+
+                <h3>Reduce HTTP Requests</h3>
+                <p>
+                    Fewer requests mean faster load times. Combine files where it makes sense, inline
+                    critical CSS, and be selective about what you load.
+                </p>
+
+                <h3>Optimize Images</h3>
+                <p>
+                    Images are often the heaviest assets on a page. Use modern formats like WebP,
+                    compress aggressively, and implement lazy loading for images below the fold.
+                </p>
+
+                <h3>Minimize JavaScript</h3>
+                <p>
+                    JavaScript can block rendering and slow down your site. Ask yourself: do you really
+                    need that library? Can you accomplish the same thing with CSS or vanilla JavaScript?
+                </p>
+
+                <h2>3. Make It Responsive</h2>
+                <p>
+                    Responsive design isn't just about different screen sizes—it's about creating a
+                    great experience regardless of device, network speed, or user preferences.
+                </p>
+
+                <blockquote>
+                    "The fastest website is one that doesn't need to load anything at all."
+                </blockquote>
+
+                <h2>4. Test on Real Devices</h2>
+                <p>
+                    Browser dev tools are great, but nothing beats testing on actual devices. Pay
+                    attention to:
+                </p>
+                <ul>
+                    <li>Touch target sizes (are buttons easy to tap?)</li>
+                    <li>Load times on slower connections</li>
+                    <li>Readability at different sizes</li>
+                    <li>Accessibility with screen readers</li>
+                </ul>
+
+                <h2>The Bottom Line</h2>
+                <p>
+                    Building fast, responsive websites comes down to respecting your users' time and
+                    bandwidth. Every optimization you make is a better experience for someone on a
+                    slow connection or an older device.
+                </p>
+
+                <p>
+                    Start with less, add only what's necessary, and always measure the impact of your
+                    changes. Your users will thank you.
+                </p>
+            </div>
+        </article>
+
+        <div style="margin-top: 3rem;">
+            <a href="../../blog.html">← Back to all posts</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
