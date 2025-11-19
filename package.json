@@ -1,0 +1,17 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "A minimal, fast personal website with blog",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'No build step required - static HTML site'",
+    "md2html": "node scripts/markdown-to-html.js"
+  },
+  "keywords": [
+    "personal-website",
+    "blog",
+    "portfolio"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

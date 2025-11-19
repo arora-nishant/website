@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "how-to-write-blog-post",
+    "title": "How to Write a Blog Post",
+    "date": "2024-01-25",
+    "excerpt": "A guide to creating new blog posts for this website using Markdown."
+  },
+  {
+    "title": "Building Fast and Responsive Websites",
+    "slug": "building-fast-responsive-websites",
+    "date": "2024-01-20",
+    "excerpt": "Best practices for creating websites that load quickly and work great on all devices. Performance matters more than ever in web development."
+  },
+  {
+    "title": "Welcome to My Blog",
+    "slug": "welcome-to-my-blog",
+    "date": "2024-01-15",
+    "excerpt": "An introduction to this blog and what you can expect to find here. I'll be writing about technology, programming, and my experiences in software development."
+  }
+]
