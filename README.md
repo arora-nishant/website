@@ -8,7 +8,7 @@ A fast, minimal, and classy personal website with an integrated blog. Built with
 - **Fast & Responsive** - Works perfectly on all devices
 - **Easy Blog Management** - Write posts in Markdown or HTML
 - **No Dependencies** - Pure HTML/CSS/JS (optional Node.js for Markdown conversion)
-- **Free Hosting** - Ready to deploy on GitHub Pages
+- **Free Hosting** - Ready to deploy on Netlify (or Vercel, GitHub Pages)
 - **SEO Friendly** - Semantic HTML with proper meta tags
 
 ## Getting Started
@@ -49,25 +49,21 @@ See [HOW_TO_BLOG.md](HOW_TO_BLOG.md) for detailed instructions.
 2. Run `npm run md2html` to convert it to HTML
 3. Commit and push
 
-### 4. Deploy to GitHub Pages
+### 4. Deploy to Netlify
 
-This website is configured to automatically deploy to GitHub Pages.
+This website is configured for easy deployment on Netlify with automatic deployments.
 
-**Setup:**
-1. Push your code to GitHub
-2. Go to your repository Settings → Pages
-3. Under "Build and deployment", select "GitHub Actions"
-4. Your site will be live at `https://yourusername.github.io/repository-name/`
+**Quick Deploy (2 minutes):**
+1. Push your code to GitHub (already done!)
+2. Go to [netlify.com](https://netlify.com) and sign up with GitHub
+3. Click "Add new site" → "Import an existing project"
+4. Select your repository
+5. Click "Deploy site" - Netlify auto-detects everything!
+6. Your site is live at `https://your-site-name.netlify.app`
 
-**Alternative: Manual deployment**
+**That's it!** Every push to main will auto-deploy.
 
-If you prefer not to use GitHub Actions:
-1. Go to Settings → Pages
-2. Select "Deploy from a branch"
-3. Choose your main branch and `/ (root)` folder
-4. Save
-
-Your site will be live in a few minutes!
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions, custom domains, and more options.
 
 ## Project Structure
 
@@ -168,10 +164,10 @@ Works on all modern browsers:
 
 ## Alternative Hosting Options
 
-While this is configured for GitHub Pages, you can host it anywhere:
+While this is configured for Netlify, you can host it anywhere:
 
-- **Netlify** - Drag and drop deployment, free tier
-- **Vercel** - Connect your repo, auto-deploy on push
+- **Vercel** - Similar to Netlify, excellent performance
+- **GitHub Pages** - Free hosting from GitHub (see .github/workflows/deploy.yml)
 - **Cloudflare Pages** - Fast global CDN, free tier
 - **Any static host** - Just upload the files!
 
