@@ -1,18 +1,19 @@
 /*
- * Minimalist Personal Website Styles
- * Inspired by clean, content-focused design
+ * Personal Website Styles
+ * Clean, minimal design with grey borders and focused typography
  */
 
 :root {
     --text-primary: #1a1a1a;
-    --text-secondary: #666;
+    --text-secondary: #555;
     --text-tertiary: #999;
-    --border-color: #e0e0e0;
-    --accent-color: #0066cc;
-    --accent-hover: #0052a3;
+    --border-color: #ddd;
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
     --background: #ffffff;
-    --code-bg: #f5f5f5;
-    --max-width: 720px;
+    --body-bg: #f5f5f5;
+    --code-bg: #f8f8f8;
+    --max-width: 780px;
     --spacing-unit: 1.5rem;
 }
 
@@ -23,45 +24,55 @@
 }
 
 html {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.65;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+    font-family: 'Georgia', 'Times New Roman', serif;
     color: var(--text-primary);
-    background: var(--background);
+    background: var(--body-bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main content wrapper with grey borders */
+.site-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background: var(--background);
+    min-height: 100vh;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 /* Navigation */
 .nav {
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
-    margin-bottom: 3rem;
+    padding: 1.75rem 0;
+    background: var(--background);
 }
 
 .nav-content {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    max-width: 100%;
+    padding: 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-brand {
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
     color: var(--text-primary);
     text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    letter-spacing: -0.02em;
 }
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
 .nav-links a {
@@ -69,6 +80,7 @@ body {
     text-decoration: none;
     transition: color 0.2s ease;
     font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .nav-links a:hover,
@@ -78,39 +90,42 @@ body {
 
 /* Container */
 .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1.5rem 4rem;
+    max-width: 100%;
+    padding: 0 3rem 4rem;
 }
 
 /* Typography */
 h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
     color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     line-height: 1.3;
-    margin: 2.5rem 0 1rem;
+    margin: 2.5rem 0 1.25rem;
     color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     line-height: 1.4;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     color: var(--text-secondary);
+    line-height: 1.7;
 }
 
 a {
@@ -121,47 +136,71 @@ a {
 
 a:hover {
     color: var(--accent-hover);
-    text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-    margin: 3rem 0;
+    padding: 3rem 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content {
+    order: 1;
+}
+
+.hero-image {
+    order: 2;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
+    font-style: italic;
     margin-bottom: 2rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 /* About Section */
 .about {
-    margin: 3rem 0;
+    margin: 2.5rem 0;
 }
 
 .about p {
     font-size: 1.05rem;
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
-/* Recent Posts */
-.recent-posts {
-    margin: 3rem 0;
+/* Blog List */
+.blog-list {
+    margin-top: 2rem;
 }
 
-.post-list {
-    margin: 1.5rem 0;
+.page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
 }
 
 .post-item {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -173,10 +212,12 @@ a:hover {
     font-size: 0.9rem;
     color: var(--text-tertiary);
     margin-bottom: 0.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .post-item h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
 }
 
 .post-item h3 a {
@@ -190,25 +231,7 @@ a:hover {
 
 .post-excerpt {
     color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.view-all {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--accent-color);
-    font-weight: 500;
-}
-
-/* Blog List */
-.blog-list {
-    margin-top: 2rem;
-}
-
-.page-subtitle {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    line-height: 1.7;
 }
 
 /* Experience Timeline */
@@ -218,8 +241,8 @@ a:hover {
 
 .timeline-item {
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 2rem;
+    grid-template-columns: 160px 1fr;
+    gap: 2.5rem;
     margin-bottom: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid var(--border-color);
@@ -227,23 +250,26 @@ a:hover {
 
 .timeline-item:last-child {
     border-bottom: none;
+    margin-bottom: 0;
 }
 
 .timeline-date {
     color: var(--text-tertiary);
     font-size: 0.9rem;
     font-weight: 500;
-    padding-top: 0.2rem;
+    padding-top: 0.3rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .timeline-content h3 {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
 }
 
 .company {
     color: var(--text-secondary);
     font-weight: 500;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .description {
@@ -256,7 +282,7 @@ a:hover {
 }
 
 .highlights li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.65rem;
 }
 
 /* Skills */
@@ -267,13 +293,13 @@ a:hover {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     margin-top: 1.5rem;
 }
 
 .skill-category h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    margin-bottom: 0.65rem;
 }
 
 .skill-category p {
@@ -288,7 +314,7 @@ a:hover {
 
 .contact-intro p {
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 .contact-methods {
@@ -297,47 +323,161 @@ a:hover {
 
 .contact-item {
     margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.contact-item h3 {
-    font-size: 0.9rem;
+.contact-icon {
+    font-size: 1.5rem;
+    color: var(--text-tertiary);
+    width: 40px;
+    text-align: center;
+}
+
+.contact-details h3 {
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--text-tertiary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
-.contact-item p {
-    font-size: 1.1rem;
+.contact-details p,
+.contact-details a {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
 }
 
 .social-links {
     list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .social-links li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
 }
 
 .social-links a {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.timezone {
-    color: var(--text-tertiary);
-    font-size: 0.9rem;
+/* Contact Form */
+.contact-form {
+    margin: 3rem 0;
+    max-width: 600px;
 }
 
-.contact-note {
-    margin-top: 3rem;
-    padding: 1.5rem;
+.contact-form h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background: var(--background);
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+/* Resume Page */
+.resume-header {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.65rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.btn-download:hover {
+    background: var(--accent-hover);
+    color: white;
+}
+
+.resume-viewer {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
     background: var(--code-bg);
-    border-left: 3px solid var(--accent-color);
+    min-height: 800px;
 }
 
-.note {
+.resume-viewer iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+
+.resume-fallback {
+    padding: 3rem;
+    text-align: center;
     color: var(--text-secondary);
-    margin-bottom: 0;
 }
 
 /* Blog Post */
@@ -352,11 +492,12 @@ a:hover {
 .post-meta {
     color: var(--text-tertiary);
     font-size: 0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .post-content {
     font-size: 1.05rem;
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 .post-content h2 {
@@ -376,19 +517,19 @@ a:hover {
 
 .post-content ul,
 .post-content ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+    margin-left: 1.75rem;
+    margin-bottom: 1.25rem;
     color: var(--text-secondary);
 }
 
 .post-content li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.65rem;
 }
 
 .post-content blockquote {
     border-left: 3px solid var(--border-color);
     padding-left: 1.5rem;
-    margin: 1.5rem 0;
+    margin: 1.75rem 0;
     color: var(--text-secondary);
     font-style: italic;
 }
@@ -399,6 +540,7 @@ a:hover {
     border-radius: 3px;
     font-size: 0.9em;
     font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+    border: 1px solid var(--border-color);
 }
 
 .post-content pre {
@@ -406,45 +548,72 @@ a:hover {
     padding: 1.5rem;
     border-radius: 4px;
     overflow-x: auto;
-    margin: 1.5rem 0;
+    margin: 1.75rem 0;
+    border: 1px solid var(--border-color);
 }
 
 .post-content pre code {
     background: none;
     padding: 0;
+    border: none;
 }
 
 /* Footer */
 .footer {
     border-top: 1px solid var(--border-color);
-    padding: 2rem 0;
+    padding: 2.5rem 3rem;
     margin-top: 4rem;
     text-align: center;
+    background: var(--background);
 }
 
 .footer p {
     color: var(--text-tertiary);
     font-size: 0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     html {
-        font-size: 15px;
+        font-size: 16px;
     }
 
-    .nav-content {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: flex-start;
+    .nav-content,
+    .container,
+    .footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .nav-brand {
+        font-size: 1.25rem;
     }
 
     .nav-links {
-        gap: 1rem;
+        gap: 1.25rem;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image {
+        order: 1;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
     }
 
     .timeline-item {
@@ -459,22 +628,48 @@ a:hover {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 1rem 3rem;
-    }
-
     .nav-content {
-        padding: 0 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
     }
 
     h1 {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
+}
+
+/* Utility classes */
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.back-link:hover {
+    color: var(--accent-color);
 }

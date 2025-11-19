@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <nav class="nav">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">Your Name</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="resume.html" class="active">Resume</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container">
+            <div class="resume-header">
+                <h1>Resume</h1>
+                <a href="files/resume.pdf" download class="btn-download">
+                    <span>⬇</span>
+                    Download PDF
+                </a>
+            </div>
+
+            <div class="resume-viewer">
+                <iframe src="files/resume.pdf" title="Resume PDF">
+                </iframe>
+                <div class="resume-fallback">
+                    <p>
+                        <strong>Can't see the PDF?</strong><br>
+                        <a href="files/resume.pdf" download>Click here to download it</a>
+                    </p>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+                        <em>Note:</em> To use this page, add your resume PDF file to the <code>files/</code> directory
+                        and name it <code>resume.pdf</code>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
